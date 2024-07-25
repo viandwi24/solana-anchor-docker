@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  solanchor:
+    build: .
+    volumes:
+      - solanchor:/root/.config/solana
+    environment:
+      - SOLANA_RPC=https://api.mainnet-beta.solana.com
+
+volumes:
+  solanchor:
+    driver: local
